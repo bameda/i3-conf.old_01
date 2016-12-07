@@ -203,3 +203,6 @@ bar {
 # Set background
 exec --no-startup-id xsetroot -solid "#111111"
 
+### Apps ###
+# Network manager
+bindsym $mod+Shift+n exec --no-startup-id kde5-nm-connection-editor
