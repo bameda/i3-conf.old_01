@@ -182,11 +182,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Display mode
-set $mode_display Display Mode: (h) Home, (o) Office, (m) Marmolejo
+set $mode_display Display Mode: (h) Home, (o) Office, (m) Marmolejo, (c) Customize
 mode "$mode_display" {
     bindsym h exec --no-startup-id ~/.local/bin/xrandr-home && nitrogen --restore, mode "default"
     bindsym o exec --no-startup-id ~/.local/bin/xrandr-office && nitrogen --restore, mode "default"
     bindsym m exec --no-startup-id ~/.local/bin/xrandr-marmolejo && nitrogen --restore, mode "default"
+    bindsym c exec arandr
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
