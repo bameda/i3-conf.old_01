@@ -11,6 +11,6 @@ Packages needed
 - arandr
 - nitrogen
 - kde5-nm-connection-editor
-- amixer
+- alsa-utils 
 - j4-dmenu-desktop
 - konsole
