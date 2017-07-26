@@ -10,8 +10,8 @@ Packages needed
 - i3status
 - arandr
 - nitrogen
-- kde5-nm-connection-editor
-- alsa-utils 
+- wicd and wicd-gtk
+- alsa-utils
 - j4-dmenu-desktop
 - konsole
 
