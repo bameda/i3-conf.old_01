@@ -10,7 +10,7 @@ Packages needed
 - i3status
 - arandr
 - nitrogen
-- wicd and wicd-gtk
+- networkmanager network-manager-applet gnome-icon-theme
 - alsa-utils
 - j4-dmenu-desktop
 - konsole
