@@ -215,14 +215,21 @@ bar {
     workspace_buttons yes
     font pango:DejaVu Sans Mono 20
 }
-exec --no-startup-id nm-applet
 
+## APPS
 
+# Network manager
+#bindsym $mod+Shift+n exec --no-startup-id kde5-nm-connection-editor
+bindsym $mod+Shift+n exec --no-startup-id nm-connection-editor
+
+## Autostart apps
 
 # Set background
 exec --no-startup-id xsetroot -solid "#111111"
 exec --no-startup-id nitrogen --restore
 
-## Apps ###
-# Network manager (you need wicd and wicd-gtk)
-bindsym $mod+Shift+n exec --no-startup-id nm-connection-editor
+# Start redshift-gtk
+exec --no-startup-id pgrep redshift-gtk &> /dev/null || redshift-gtk &> /dev/null &
+
+# Start network manager applet
+exec --no-startup-id nm-applet
