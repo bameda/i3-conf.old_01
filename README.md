@@ -19,10 +19,9 @@ Screen manager
 
 Background manager
 - nitrogen
-- networkmanager network-manager-applet gnome-icon-theme
 
 Network manager
-- wicd and wicd-gtk
+- networkmanager network-manager-applet gnome-icon-theme
 
 Audio utils
 - alsa-utils
