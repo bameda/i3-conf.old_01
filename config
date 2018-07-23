@@ -21,6 +21,9 @@ set $mod Mod4
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 14
 
+# thin borders
+hide_edge_borders both
+
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -141,6 +144,7 @@ bindsym $mod+Shift+r restart
 
 # System mode (lock, poweoff, syspend, hibernate)
 set $Locker i3lock -c 000000 && sleep 1
+
 set $mode_system System: (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
@@ -207,6 +211,22 @@ mode "$mode_touchpad" {
 }
 bindsym $mod+t mode "$mode_touchpad"
 
+
+# set window colors
+set $bg-color            #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676e7d
+set $urgent-bg-color     #e53935
+set $indicator-color     #a0a0a0
+
+#                       border             background         text                 indicator
+client.focused          $bg-color          $bg-color          $text-color          $indicator-color
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color
+client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          $indicator-color
+
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -216,11 +236,20 @@ bar {
     font pango:DejaVu Sans Mono 20
 }
 
+
+# floating windows
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Pavucontrol"] resize set 800 600
+for_window [class="Kalu"] floating enable
+
+
 ## APPS
 
 # Network manager
 #bindsym $mod+Shift+n exec --no-startup-id kde5-nm-connection-editor
 bindsym $mod+Shift+n exec --no-startup-id nm-connection-editor
+bindsym $mod+p exec --no-startup-id pavucontrol
+
 
 ## Autostart apps
 
@@ -233,3 +262,6 @@ exec --no-startup-id pgrep redshift-gtk &> /dev/null || redshift-gtk &> /dev/nul
 
 # Start network manager applet
 exec --no-startup-id nm-applet
+
+# Start kalu
+exec --no-startup-id "sleep 5s && kalu"

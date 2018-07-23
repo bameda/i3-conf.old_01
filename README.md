@@ -23,9 +23,6 @@ Background manager
 Network manager
 - networkmanager network-manager-applet gnome-icon-theme
 
-Audio utils
-- alsa-utils
-
 Terminal
 - konsole
 
