@@ -214,9 +214,9 @@ bindsym $mod+t mode "$mode_touchpad"
 
 # set window colors
 set $bg-color            #2f343f
-set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
-set $inactive-text-color #676e7d
+set $inactive-bg-color   #1b1e26
+set $inactive-text-color #757d8e
 set $urgent-bg-color     #e53935
 set $indicator-color     #a0a0a0
 
