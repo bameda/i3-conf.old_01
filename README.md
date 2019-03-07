@@ -34,7 +34,10 @@ Setup
 
 1. Install all the packages needed.
 2. Clone this repo inside `~/.config/i3`
-
-    ```
-    git clone https://github.com/bameda/i3-conf.git ~/.config/i3
-    ```
+   ```
+   git clone https://github.com/bameda/i3-conf.git ~/.config/i3
+   ```
+3. Set i3status configuration
+   ```
+   mkdir ~/.config/i3status && ln -s ~/.config/i3/i3status.conf ~/.config/i3status/config
+   ```
