@@ -27,7 +27,7 @@ Terminal
 - konsole
 
 Notification
-- dunst (and `mkdir ~/.config/dunst/dunstrc && cp /usr/share/dunst/dunstrc ~/.config/dunst/dunstrc`)
+- dunst (and `mkdir ~/.config/dunst && cp /usr/share/dunst/dunstrc ~/.config/dunst/dunstrc`)
 
 Setup
 -----
