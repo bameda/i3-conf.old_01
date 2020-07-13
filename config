@@ -241,7 +241,7 @@ bar {
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Pavucontrol"] resize set 800 600
 for_window [class="Kalu"] floating enable
-
+for_window [title="^Android Emulator"] floating enable
 
 ## APPS
 
